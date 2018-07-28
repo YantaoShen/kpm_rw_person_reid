@@ -10,7 +10,7 @@ Our code is mainly borrowed from [open-reid](https://github.com/Cysu/open-reid)
 
 ## Requirements
 * python 2.7 (We recommend to use [Anaconda](https://www.anaconda.com/download/#linux), since many python libs like [numpy](http://www.numpy.org/) and [sklearn](http://scikit-learn.org/stable/) are needed in our code.)  
-* [PyTorch](http://pytorch.org/) (version == 0.3.0)   
+* [PyTorch](https://pytorch.org/previous-versions/) (version == 0.3.0)   
 * [metric-learn](https://github.com/metric-learn/metric-learn)  
 
 Then you can clone our git repo with
