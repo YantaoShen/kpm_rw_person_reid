@@ -9,7 +9,7 @@ Our code is mainly borrowed from [open-reid](https://github.com/Cysu/open-reid)
 
 
 ## Requirements
-* python 2.7 (We recommand to use [Anaconda](https://www.anaconda.com/download/#linux))  
+* python 2.7 (We recommend to use [Anaconda](https://www.anaconda.com/download/#linux), since many python libs like [numpy](http://www.numpy.org/) and [sklearn](http://scikit-learn.org/stable/) are needed in our code.)  
 * [PyTorch](http://pytorch.org/) (version == 0.3.0)   
 * [metric-learn](https://github.com/metric-learn/metric-learn)  
 
@@ -17,6 +17,7 @@ Then you can clone our git repo with
 ```shell
 git clone https://github.com/YantaoShen/kpm_rw_person_reid.git
 cd kpm_rw_person_reid
+python setup.py install
 ```
 
 ## Datasets Download
@@ -36,14 +37,24 @@ For CUHK03 and DukeMTMC, the process is the same, the code will unzip these `.zi
 
 
 ## Examples
-For training the model with KPM and GSRW, please download our pretrained models on three datasets, which are `baseline model + KPM` in the paper (group number is 2). ([Market1501_pre_model](), [CUHK03_pre_model](), [DukeMTMC_pre_model]())
+For training the model with KPM and GSRW, please download our pretrained models on three datasets, which are `baseline model + KPM` in the paper (group number is 2).  
+* [Market1501_pre_model](https://drive.google.com/open?id=1NKjvf5FbLR2eqybFULBRc3f2_9KM8J4W) 
+* [CUHK03_pre_model](https://drive.google.com/open?id=1cKwO7ra9QJsjja5GtgpeFNJyg-sTs6ba) 
+* [DukeMTMC_pre_model](https://drive.google.com/open?id=1RhouE85aji9w7asdPolmGbWnQsZBVAIm).
 
 Then you can train the model with follow commands
 ```shell
-python examples/main.py -d cuhk03 -b 88 --features 2048 --alpha 0.95 --grp-num 2 --lr 0.000001 --ss '10 --epochs 10 --dropout 0.8 --combine-trainval --weight-decay 0 --retrain examples/logs/cuhk03_pretrained/model_best.pth.tar --logs-dir 'examples/logs/cuhk03-final-model'
+python examples/main.py -d cuhk03 -b 88 --features 2048 --alpha 0.95 --grp-num 2 --lr 0.000001 --ss '10 --epochs 10 --dropout 0.8 --combine-trainval --weight-decay 0 --retrain examples/logs/cuhk03_pretrained/model_best.pth.tar --logs-dir examples/logs/cuhk03-final-model
 ```
 
-We trained this model on a server with 8 TITAN X GPUs. if you don't have such or better hardware. You may decrease the batchsize (the performance may also drop). Or you can directly download our final model ([Market1501_final_model](), [CUHK03_final_model](), [DukeMTMC_final_model]()). And test them with follow commands on different datasets
+We trained this model on a server with 8 TITAN X GPUs. if you don't have such or better hardware. You may decrease the batchsize (the performance may also drop).
+
+Or you can directly download our final model 
+* [Market1501_final_model](https://drive.google.com/open?id=1yV6gX12w7SaTwF9BfyO2F1x3Ky0JjZUS)
+* [CUHK03_final_model](https://drive.google.com/open?id=1Qzu7JmNkeiol0XK1u_yURE-IqG8lBRkU)
+* [DukeMTMC_final_model](https://drive.google.com/open?id=1DEEZnriHpKLq8ntr_Ly3g5VpI2RnAGHH).
+
+And test them with follow commands on different datasets
 ```shell
 python examples/main.py -d cuhk03 -b 256 --features 2048 --alpha 0.95 --grp-num 2 --resume ./examples/logs/cuhk03-final-model/model_best.pth.tar --evaluate
 ```
