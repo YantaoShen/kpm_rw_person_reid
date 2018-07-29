@@ -44,7 +44,7 @@ For training the model with KPM and GSRW, please download our pretrained models 
 
 Then you can train the model with follow commands
 ```shell
-python examples/main.py -d cuhk03 -b 88 --features 2048 --alpha 0.95 --grp-num 2 --lr 0.000001 --ss 10 --epochs 10 --dropout 0.8 --combine-trainval --weight-decay 0 --retrain examples/logs/cuhk03_pretrained/model_best.pth.tar --logs-dir examples/logs/cuhk03-final-model
+python examples/main.py -d cuhk03 -b 88 --features 2048 --alpha 0.95 --grp-num 2 --lr 0.000001 --ss 10 --epochs 10 --dropout 0.8 --combine-trainval --weight-decay 0 --retrain examples/logs/cuhk03-pretrained/model_best.pth.tar --logs-dir examples/logs/cuhk03-final-model
 ```
 
 We trained this model on a server with 8 TITAN X GPUs. if you don't have such or better hardware. You may decrease the batchsize (the performance may also drop).
