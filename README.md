@@ -1,11 +1,11 @@
 # Person-ReID with Deep Kronecker-Product Matching and Group-shuffiling Random Walk
 
-This is a Pytorch implementation of our two CVPR works' combination:
+This is a Pytorch implementation of our two CVPR 2018 works' combination:
 
 * End-to-End Deep Kronecker-Product Matching for Person Re-identification (KPM) [Paper](http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_End-to-End_Deep_Kronecker-Product_CVPR_2018_paper.pdf)  
 * Deep Group-shuffling Random Walk for Person Re-identification (GSRW) [Paper](http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Deep_Group-Shuffling_Random_CVPR_2018_paper.pdf)
 
-Our code is mainly borrowed from [open-reid](https://github.com/Cysu/open-reid)
+Our code is mainly based on [open-reid](https://github.com/Cysu/open-reid)
 
 
 ## Requirements
