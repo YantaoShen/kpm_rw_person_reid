@@ -11,7 +11,8 @@ Our code is mainly based on [open-reid](https://github.com/Cysu/open-reid)
 ## Requirements
 * python 2.7 (We recommend to use [Anaconda](https://www.anaconda.com/download/#linux), since many python libs like [numpy](http://www.numpy.org/) and [sklearn](http://scikit-learn.org/stable/) are needed in our code.)  
 * [PyTorch](https://pytorch.org/previous-versions/) (we run the code under version 0.3.0, maybe versions <= 0.3.1 also work.)   
-* [metric-learn](https://github.com/metric-learn/metric-learn)  
+* [metric-learn 0.3.0](https://pypi.org/project/metric-learn/0.3.0/)  
+* [torchvision 0.2.1](https://pypi.org/project/torchvision/0.2.1/)
 
 Then you can clone our git repo with
 ```shell
@@ -28,7 +29,7 @@ You can download these datasets as `.zip` through the links above, then
 cd examples/
 mkdir data
 cd data/
-mdkir market1501
+mkdir market1501
 cd market1501
 mkdir raw/
 mv dir_of_market1501_zip raw/
