@@ -123,8 +123,8 @@ def main(args):
         else:
             print('loading base part of pretrained model...')
             checkpoint = load_checkpoint(args.retrain)
-            #copy_state_dict(checkpoint['state_dict'], base_model, strip='base.module.', replace='module.')
-            copy_state_dict(checkpoint['state_dict'], base_model, strip='base_model.', replace='')
+            copy_state_dict(checkpoint['state_dict'], base_model, strip='base.module.', replace='module.')
+            #copy_state_dict(checkpoint['state_dict'], base_model, strip='base_model.', replace='')
             print('loading embed part of pretrained model...')
             if grp_num > 1:
                 for i in range(grp_num):
