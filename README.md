@@ -84,6 +84,16 @@ Please cite these papers in your publications if it helps your research:
 }
 ```
 
+```
+@ARTICLE{8906139,
+  author={Y. {Shen} and T. {Xiao} and S. {Yi} and D. {Chen} and X. {Wang} and H. {Li}},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Person Re-identification with Deep Kronecker-Product Matching and Group-shuffling Random Walk}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-1},}
+```
 
 
 
